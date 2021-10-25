@@ -28,7 +28,7 @@ import java.util.Scanner;
         if selection == 8: 
             equilateralTriangle.prompt()
             break*/
-public class main 
+public class geometry
 {
     public static void main(String[] args)
     {

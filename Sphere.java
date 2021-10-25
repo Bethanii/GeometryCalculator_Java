@@ -7,7 +7,7 @@ public class Sphere
 {
     public double surfaceArea(double rad)
     {
-    double surfaceArea = Math.round((Math.PI * 4) * Math.pow(rad, 2));
+    double surfaceArea = Math.PI * 4 * Math.pow(rad, 2);
     return surfaceArea;
     }
     
