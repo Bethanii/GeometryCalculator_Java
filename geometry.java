@@ -1,41 +1,58 @@
+/*
+Name: Bethany Hampton
+File Name: Geometry.java 
+Creation Date: 10/31/2021
+*/
+
+//importing packages
 import java.lang.System;
 import java.util.Scanner;
 
-public class geometry
+public class Geometry
 {
     public static void main(String[] args)
     {
         while (true) 
         {
+            //creating scanner object
+            Scanner sc = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+            //Object instantiation (because of non-static methods like prompt())
+            Sphere sphere = new Sphere();
+            Cone cone = new Cone();
+            Cylinder cylinder = new Cylinder();
 
-        Sphere sphere = new Sphere();
-        Cone cone = new Cone();
-        Cylinder cylinder = new Cylinder();
+            //Displaying selection menu
+            System.out.println("\n" + "1.  Sphere");
+            System.out.println("2. Cylinder");
+            System.out.println("3. Cone");
+            System.out.println("0. Quit\n");
 
-        System.out.println("Welcome to the my Geometry Program" +"\n" + "1. Sphere" +"\n" + "2. Cylinder"
-        +"\n" + "3. Cone" + "\n" + "0. Quit");
+            //prompting user for selection choice
+            System.out.println("Please enter your selection: ");
 
-        System.out.println("Please enter your selection: ");
-        int selection = sc.nextInt();
+            //reading user input and setting to selection variable
+            int selection = sc.nextInt();
 
-        if (selection == 0)
-        {
-            break;
-        }
-        if (selection == 1)
-        {
-            sphere.prompt();
-        }
-        if (selection == 2)
-        {
-            cylinder.prompt();
-        }
-        if (selection == 3)
-        {
-            cone.prompt();
-        }
+            //looping through user selection to determine correct methods/calculations
+
+            //this breaks at 0 because the user would like to exit
+            if (selection == 0)
+            {
+                break;
+            }
+            if (selection == 1)
+            {
+                sphere.prompt();
+            }
+            if (selection == 2)
+            {
+                cylinder.prompt();
+            }
+            if (selection == 3)
+            {
+                cone.prompt();
+            }
         }
     }
 }
