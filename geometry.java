@@ -17,9 +17,6 @@ public class geometry
         System.out.println("Welcome to the my Geometry Program" +"\n" + "1. Sphere" +"\n" + "2. Cylinder"
         +"\n" + "3. Cone" + "\n" + "0. Quit");
 
-        float input = (float)500.26897;
-        System.out.println("Testing float: " + Math.round(input * 1000.0) / 1000.0);
-
         System.out.println("Please enter your selection: ");
         int selection = sc.nextInt();
 
