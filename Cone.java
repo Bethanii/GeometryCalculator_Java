@@ -1,37 +1,33 @@
 import java.lang.Math;
 import java.util.Scanner;
-import java.util.function.ToDoubleFunction;
 import java.util.function.*;
 
 public class Cone
 {
     //method to get cone surface area
-    public double surfaceArea(double rad, double hi)
+    public double volume(int rad, int hgt)
     {
-        double surfaceArea = Math.PI * rad * (rad + Math.sqrt(hi * hi) + (Math.pow(rad, 2)));
-        return surfaceArea;
-    }
-
-    //method to get cone volume
-    public double volume (double rad, double hi)
-    {
-        double volume = Math.round(Math.PI * Math.sqrt(rad) * hi/3);
+        double volume = Math.PI * rad * rad * (hgt / 3);
         return volume;
     }
 
-    //method to get cone lateral surface area
-    public double latSurfaceArea(double rad, double hi)
+    public double slant(int rad, int hgt)
     {
-        double latSurfaceArea = Math.round(Math.PI * rad * slant(rad, hi));
-        return latSurfaceArea;
+        double slant = Math.sqrt(rad * rad + hgt * hgt);
+        return slant;
     }
 
-    //method to get cone slant
-    public double slant(double rad, double hi)
+    public double surfaceArea(int rad, int hgt)
     {
-    double slant = Math.round(Math.sqrt(rad) + hi * hi);
-    return slant;
+        double surfaceArea = Math.PI * rad * (rad * Math.sqrt(hgt * hgt + rad * rad));
+        return surfaceArea;
     }
+
+    public double latSurfaceArea(int rad, int hgt)
+    {
+        double latSurfaceArea = Math.PI * rad * (Math.sqrt(hgt * hgt + rad * rad));
+        return latSurfaceArea;
+    } 
 
     //method to get user info and output answers
     public void prompt()
@@ -44,9 +40,9 @@ public class Cone
          "----------------------------------------------------------");
 
          System.out.println("Please enter the Radius of a cone: ");
-         double radius = sc.nextDouble();
+         int radius = sc.nextInt();
          System.out.println("Please enter the Height of a cone: ");
-         double height = sc.nextDouble();
+         int height = sc.nextInt();
 
          System.out.println("\nLength of a Side (Slant) of a Cone = " + slant(radius, height));
          System.out.println("The Surface Area of a Cone = " + surfaceArea(radius, height));

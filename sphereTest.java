@@ -3,21 +3,18 @@ import org.junit.Test;
 
 public class sphereTest
 {
-    @Test
-    public void surfAreaTest_Pass()
+
+    Sphere classUnderTest = new Sphere();
+    
+    @Test 
+    public void sphereVolume() 
     {
-        //Passing sphere surface area test
-        Sphere sphere = new Sphere();
-        double result = sphere.surfaceArea(2);
-        assertEquals(50.26548245743669, result, 0);
+        assertEquals((4/3)* Math.PI * 1 * 1 * 1, classUnderTest.volume(1), 0.0);
     }
-    //failing sphere surface area test
-    @Test
-    public void surfAreaTest_Fail()
+    
+    @Test 
+    public void sphereSurfaceArea() 
     {
-        //Passing sphere surface area test
-        Sphere sphere = new Sphere();
-        double result = sphere.surfaceArea(2);
-        assertEquals(48, result, 0);
+        assertEquals(4 * Math.PI * 2 * 2, classUnderTest.surfaceArea(2), 0.0);
     }
 }

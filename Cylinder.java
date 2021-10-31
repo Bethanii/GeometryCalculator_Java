@@ -1,37 +1,34 @@
 import java.lang.Math;
 import java.util.Scanner;
-import java.util.function.ToDoubleFunction;
 import java.util.function.*;
 
 public class Cylinder 
 {
     //method to find cylinder surface area
-    public double surfaceArea(double rad, double hi)
+    public float surfaceArea(int rad, int hgt)
     {
-    double surfaceArea = Math.round(2 * Math.PI * rad * hi) + 2 * Math.PI * Math.pow(rad, 2);
-    return surfaceArea;
+    double surfaceArea = 2 * Math.PI * rad * hgt + 2 * Math.PI * Math.pow(rad, 2);
+    return (float)surfaceArea;
     }
 
     //method to find cylinder volume
-    public double volume(double rad, double hi)
+    public float volume(int rad, int hgt)
     {
-    double volume = Math.round(Math.PI * Math.pow(rad, 2) * hi);
-    return volume; 
+        double volume = Math.PI * rad * rad * hgt;
+        return (float)volume;
     }
 
-    //method to find cylinder lateral surface area
-    public double latSurfaceArea(double rad, double hi)
+    public float latSurfaceArea(int rad, int hgt)
     {
-    double latSurfaceArea = Math.round(2 * Math.PI * rad * hi);
-    return latSurfaceArea;
-    }
+        double latSurfaceArea = 2 * Math.PI * rad * hgt;
+        return (float)latSurfaceArea;
+    } 
 
-    //method to find cylinder top or bottom area
-    public double topOrBottom(double rad)
+    public float baseSurfaceArea(int rad)
     {
-    double topOrBottom = Math.round(Math.PI * Math.pow(rad, 2));
-    return topOrBottom;
-    }
+        double baseSurfaceArea = Math.PI * rad * 2;
+        return (float)baseSurfaceArea;
+    } 
 
     public void prompt()
     {
@@ -43,13 +40,13 @@ public class Cylinder
         System.out.println("----------------------------------------------------------");
 
         System.out.println("Please Enter the radius: ");
-        double radius = sc.nextDouble();
+        int radius = sc.nextInt();
         System.out.println("Please Enter the height: ");
-        double height = sc.nextDouble();
+        int height = sc.nextInt();
 
         System.out.println("\nThe Surface Area of a Cylinder: " + surfaceArea(radius, height));
         System.out.println("The Volume of a Cylinder = " + volume(radius, height));
         System.out.println("Lateral Surface Area of a Cylinder = " + latSurfaceArea(radius, height));
-        System.out.println("Top OR Bottom Surface Area of a Cylinder: " + topOrBottom(radius) + "\n");
+        System.out.println("Top OR Bottom Surface Area of a Cylinder: " + baseSurfaceArea(radius) + "\n");
     }
 }

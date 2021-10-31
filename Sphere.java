@@ -13,7 +13,7 @@ public class Sphere
     
     public double volume(double rad)
     {
-    double volume = Math.round((Math.PI * 4/3) * Math.pow(rad, 3));
+    double volume = (4/3)* Math.PI * rad * rad * rad;
     return volume;
     }
     
