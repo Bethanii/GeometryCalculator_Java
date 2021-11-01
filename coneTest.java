@@ -2,6 +2,7 @@
 Name: Bethany Hampton
 File Name: coneTest.java 
 Creation Date: 10/31/2021
+Notes: Comments could likely be less repetitive but I wanted to make sure that I had enough detail.
 */
 
 //importing packages
@@ -18,7 +19,8 @@ public class coneTest
     public void coneSlant() 
     {
         //comparing result to expected within positive 0.0 (delta end parameter)
-        //expected = cone slant calculation manually inputting parameter
+        //expected = cone slant calculation, manually inputting parameters
+        //result = calling method slant
         assertEquals(Math.sqrt(1 * 1 + 2 * 2), classUnderTest.slant(1,2), 0.0);
     }
 
@@ -26,7 +28,8 @@ public class coneTest
     public void coneSurfaceArea() 
     {
         //comparing result to expected within positive 0.0 (delta end parameter)
-        //expected = cone surface area calculation manually inputting parameter
+        //expected = cone surface area calculation, manually inputting parameters
+        //result = calling method surfaceArea
         assertEquals(Math.PI * 1 * (1 * Math.sqrt(2 * 2 + 1 * 1)), classUnderTest.surfaceArea(1,2), 0.0);
     }
 
@@ -34,15 +37,17 @@ public class coneTest
     public void coneVolume() 
     {
         //comparing result to expected within positive 0.0 (delta end parameter)
-        //expected = cone volume calculation manually inputting parameters
+        //expected = cone volume calculation, manually inputting parameters
+        //result = calling method volume
         assertEquals(Math.PI * 1 * 1 *(2/3), classUnderTest.volume(1,2), 0.0);
     }
 
-    @Test //setting cylinderLatSurfaceArea to run as test
+    @Test //setting coneLatSurfaceArea to run as test
     public void coneLatSurfaceArea() 
     {
         //comparing result to expected within positive 0.0 (delta end parameter)
-        //expected = cone lateral surface area calculation manually inputting parameters
+        //expected = cone lateral surface area calculation, manually inputting parameters
+        //result = calling method latSurfaceArea
         assertEquals(Math.PI * 1 * (Math.sqrt(2 * 2 + 1 * 1)), classUnderTest.latSurfaceArea(1,2), 0.0);
     }
 }

@@ -2,6 +2,7 @@
 Name: Bethany Hampton
 File Name: Cone.java 
 Creation Date: 10/31/2021
+Notes: Comments could likely be less repetitive but I wanted to make sure that I had enough detail.
 */
 
 //importing packages
@@ -64,29 +65,18 @@ public class Cone
         System.out.println("JAVA PROGRAM TO FIND VOLUME & SURFACE AREA OF A CONE");
         System.out.println("----------------------------------------------------------");
 
-        //prompting user to enter radius
+        //prompting user to enter radius and height
+        //reading user input and setting to radius and height variables
          System.out.println("Please enter the Radius of a cone: ");
-
-         //reading user input and setting to radius variable
          int radius = sc.nextInt();
-
-         //prompting user to enter height
          System.out.println("Please enter the Height of a cone: ");
-
-         //reading user input and setting to height variable
          int height = sc.nextInt();
 
          //displaying results
-         //supplying slant method with user inputs (radius and height)
+         //supplying volume, slant, surfaceArea, and latSurfaceArea methods with user inputs (radius and height)
          System.out.println("\nLength of a Side (Slant) of a Cone = " + slant(radius, height));
-
-         //supplying surface area method with user inputs (radius and height)
          System.out.println("The Surface Area of a Cone = " + surfaceArea(radius, height));
-
-         //supplying volume method with user inputs (radius and height)
          System.out.println("The Volume of a Cone = " + volume(radius, height));
-
-         //supplying lateral surface area method with user inputs (radius and height)
          System.out.println("The Lateral Surface Area of a Cone = " + latSurfaceArea(radius, height) + "\n");
     }
 }

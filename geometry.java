@@ -35,9 +35,7 @@ public class Geometry
             int selection = sc.nextInt();
 
             //looping through user selection to determine correct methods/calculations
-
-            //this breaks at 0 because the user would like to exit
-            if (selection == 0)
+            if (selection == 0) //breaks at 0 because the user would like to exit
             {
                 break;
             }
