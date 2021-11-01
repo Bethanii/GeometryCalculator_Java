@@ -12,10 +12,11 @@ import java.util.Scanner;
 public class Cylinder 
 {
     //Cylinder calculation methods
-
     //method to find cylinder surface area
     public float surfaceArea(int rad, int hgt)
     {
+        //setting surface area as a double to calculation
+        //formula: A=2πrh+2πr2
         double surfaceArea = 2 * Math.PI * rad * hgt + 2 * Math.PI * Math.pow(rad, 2);
         //not void- returning surfaceArea
         return (float)surfaceArea;
@@ -25,6 +26,7 @@ public class Cylinder
     public float volume(int rad, int hgt)
     {
         //setting volume as a double to calculation
+        //formula: V=πr2h
         double volume = Math.PI * rad * rad * hgt;
         //not void- returning volume as float
         return (float)volume;
@@ -34,6 +36,7 @@ public class Cylinder
     public float latSurfaceArea(int rad, int hgt)
     {
         //setting latSurfaceArea as a double to calculation
+        //formula: A=2πrh
         double latSurfaceArea = 2 * Math.PI * rad * hgt;
         //not void- returning lateral surface area as float
         return (float)latSurfaceArea;
@@ -43,6 +46,7 @@ public class Cylinder
     public float baseSurfaceArea(int rad)
     {
         //setting baseSurfaceArea as a double to calculation
+        //formula: A=πr2
         double baseSurfaceArea = Math.PI * rad * 2;
         //not void- returning base surface area as float
         return (float)baseSurfaceArea;

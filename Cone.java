@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class Cone
 {
     //Cone calculation methods
-
     //method to find cone volume
     public double volume(int rad, int hgt)
     {
         //setting volume as a double to calculation
+        //formula: V=πr2h/3
         double volume = Math.PI * rad * rad * (hgt / 3);
         //not void- returning volume as double
         return volume;
@@ -26,6 +26,7 @@ public class Cone
     public double slant(int rad, int hgt)
     {
         //setting slant as a double to calculation
+        //formula: l=squared(r2+h2)
         double slant = Math.sqrt(rad * rad + hgt * hgt);
         //not void- returning slant as double
         return slant;
@@ -35,6 +36,7 @@ public class Cone
     public double surfaceArea(int rad, int hgt)
     {
         //setting surfaceArea as a double to calculation
+        //formula: A=πr(r+squared(h2+r2))
         double surfaceArea = Math.PI * rad * (rad * Math.sqrt(hgt * hgt + rad * rad));
         //not void- returning surface area as double
         return surfaceArea;
@@ -44,6 +46,7 @@ public class Cone
     public double latSurfaceArea(int rad, int hgt)
     {
         //setting latSurfaceArea as a double to calculation
+        //formula: AL=πr*squared(h2+r2)
         double latSurfaceArea = Math.PI * rad * (Math.sqrt(hgt * hgt + rad * rad));
         //not void- returning lateral surface area as double
         return latSurfaceArea;
